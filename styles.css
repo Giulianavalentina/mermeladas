@@ -1,0 +1,393 @@
+/* Variables de colores */
+:root {
+  --dark-brown: #3b1a1a;
+  --white: #ffffff;
+  --mauve: #bca4a4;
+  --medium-brown: #714747;
+  --brown: #533c3c;
+  --off-white: #fff4f4;
+  --light-pink: #e4c2c2;
+
+  --border-radius: 8px;
+  --border-radius-full: 9999px;
+}
+
+  /* Estilos generales */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--off-white);
+    color: var(--dark-brown);
+    line-height: 1.6;
+}
+
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "math";
+  }
+  
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de navegación - Mantenemos tus estilos de navegación */
+.navbar {
+    background-color: var(--medium-brown);
+    padding: 1rem;
+    text-align: center;
+}
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-link {
+    background-color: var(--mauve);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius-full);
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: var(--light-pink);
+}
+  /* Encabezado principal */
+  .header {
+    background-color: #714747;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .brand-container {
+    background-color: var(--light-pink);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .brand-title {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  
+  .brand-tagline {
+    color: var(--white);
+    font-weight: 300;
+  }
+  
+  /* Encabezado de página */
+  .page-header {
+    background-color: #A17575; /* Cambiamos el color de fondo */
+    padding: 2rem 1rem; /* Aumentamos el padding */
+    text-align: center; 
+}
+
+.page-title {
+    color: var(--white); /* Cambiamos el color del título */
+    font-size: 2.5rem; /* Aumentamos el tamaño de la fuente */
+    font-weight: 700; /* Hacemos el título más bold */
+}
+  
+  /* Galería */
+  .gallery {
+    background-color: var(--brown);
+    padding: 3rem 1rem;
+  }
+  
+  .gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Productos */
+  .products {
+    padding: 2rem 1rem; /* Reducimos un poco el padding vertical */
+    background-color: #533C3C; /* Añadimos un color de fondo sutil */
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Ajustamos para que se adapte mejor a diferentes tamaños de pantalla */
+    gap: 1.5rem; /* Reducimos el espacio entre los productos */
+}
+
+  
+.product-card {
+  background-color: var(--white); /* Fondo blanco para las tarjetas de producto */
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row; /* Mostramos la imagen y los detalles en fila */
+  align-items: center; /* Alineamos verticalmente los elementos */
+  gap: 1rem; /* Espacio entre la imagen y los detalles */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Añadimos una ligera sombra */
+}
+
+.product-image-container {
+  width: 150px; /* Ancho fijo para la imagen */
+  height: 150px; /* Alto fijo para la imagen para mantener la proporción */
+  border-radius: var(--border-radius);
+  overflow: hidden; /* Recortamos cualquier parte de la imagen que exceda el contenedor */
+  flex-shrink: 0; /* Evitamos que la imagen se encoja demasiado */
+}
+
+  
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubrimos el contenedor con la imagen manteniendo su proporción */
+  display: block;
+}
+
+.product-details {
+  flex-grow: 1; /* Permite que los detalles ocupen el espacio restante */
+}
+
+.product-title {
+  font-size: 1.1rem; /* Reducimos un poco el tamaño del título del producto */
+  color: var(--dark-brown);
+  margin-bottom: 0.3rem;
+  font-weight: 600; /* Hacemos el título un poco más bold */
+}
+  
+.product-description {
+  color: var(--brown);
+  font-size: 0.9rem; /* Reducimos el tamaño de la descripción */
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-weight: 700;
+  color: var(--medium-brown); /* Cambiamos el color del precio */
+  font-size: 1rem;
+}
+  
+  /* Sobre Nosotros */
+  .about {
+    padding: 3rem 1rem;
+  }
+  
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-card {
+    background-color: var(--light-pink);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+  }
+  
+  .about-title {
+    font-size: 1.25rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+  }
+  
+  .about-text {
+    color: var(--dark-brown);
+    line-height: 1.8;
+  }
+  
+  /* Contacto */
+  .contact {
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-container {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-button {
+    background-color: var(--medium-brown);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-button:hover {
+    background-color: var(--brown);
+  }
+  
+  .contact-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .contact-icon {
+    color: var(--dark-brown);
+    transition: color 0.3s;
+  }
+  
+  .contact-icon:hover {
+    color: var(--brown);
+  }
+  
+  /* Pie de página */
+  .footer {
+    background-color: var(--medium-brown);
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--off-white);
+}
+
+  
+  /* Utilidades */
+  .mobile-only {
+    display: block;
+  }
+  
+  /* Media queries */
+  @media (min-width: 768px) {
+    .gallery-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .products-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .about-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .product-card {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  
+    .product-image-container {
+      width: 33.333%;
+      margin-bottom: 0;
+    }
+  
+    .product-details {
+      width: 66.666%;
+    }
+  
+    .mobile-only {
+      display: none;
+    }
+  
+    .process-text {
+      text-align: center;
+    }
+  
+    .brand-title {
+      font-size: 3rem;
+    }
+  }
+
+.products {
+    padding-top: 3rem; /* Añadimos un poco más de espacio en la parte superior */
+    padding-bottom: 3rem; /* Añadimos un poco más de espacio en la parte inferior */
+}
+
+.page-title {
+    margin-bottom: 1.5rem; /* Aumentamos el margen inferior del título de la página */
+}
+
+.product-card {
+    border: 1px solid #ddd; /* Añadimos un borde sutil a las tarjetas */
+}
+  
+.contacto-header {
+  background-color: var(--nauve); /* Cambiamos el color de fondo */
+  padding: 2rem 1rem; /* Aumentamos el padding */
+  text-align: center; 
+}
+
+.contacto-title {
+  color: #3b1a1a; /* Cambiamos el color del título */
+  font-size: 2.5rem; /* Aumentamos el tamaño de la fuente */
+  font-weight: 700; /* Hacemos el título más bold */
+}
